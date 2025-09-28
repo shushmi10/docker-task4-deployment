@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>BMI Calculator</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 520px; margin: 40px auto; }
+    .card { padding: 20px; border: 1px solid #ddd; border-radius: 10px; }
+    input { padding: 8px; width: 100%; margin: 6px 0 14px; }
+    button { padding: 10px 16px; cursor: pointer; }
+    .result { margin-top: 14px; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h1>BMI Calculator</h1>
+  <div class="card">
+    <form method="post">
+      <label>Weight (kg)</label>
+      <input name="weight" type="number" step="0.1" required>
+      <label>Height (cm)</label>
+      <input name="height" type="number" step="0.1" required>
+      <button type="submit">Calculate</button>
+    </form>
+
+    {% if result %}
+      <div class="result">
+        {% if result.error %}
+          {{ result.error }}
+        {% else %}
+          BMI: {{ result.bmi }} ({{ result.label }})
+        {% endif %}
+      </div>
+    {% endif %}
+  </div>
+</body>
+</html>
+docker run -d -p 7000:7000 --name bmi-app shushmi10/bmi-app:1.0
