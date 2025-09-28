@@ -20,9 +20,3 @@ This repository contains my Task 4 apps for **SWE40006 Software Deployment and E
 
 ---
 
-## Links
-- **GitHub repo**: https://github.com/USERNAME/task4-docker-deployment  
-- **Docker Hub images**:  
-  - https://hub.docker.com/r/shushmi10/flask-hello  
-  - https://hub.docker.com/r/shushmi10/bmi-app  
-  - https://hub.docker.com/r/shushmi10/text-tool
